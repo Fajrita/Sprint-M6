@@ -12,7 +12,7 @@ import javax.persistence.Table;
 public class Capacitation {
 
 	@Id
-	@Column(name="id_capacitation")
+	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
@@ -24,10 +24,13 @@ public class Capacitation {
 	private int attendeesCount;
 
 	public Capacitation() {
-
+		super();
 	}
 
-	public Capacitation(String clientRut, String day, String time, String location, int duration, int attendeesCount) {
+	public Capacitation(int id, String clientRut, String day, String time, String location, int duration,
+			int attendeesCount) {
+		super();
+		this.id = id;
 		this.clientRut = clientRut;
 		this.day = day;
 		this.time = time;
@@ -94,7 +97,8 @@ public class Capacitation {
 
 	@Override
 	public String toString() {
-		return "Capacitation " + "id: " + id + ", clientRut: " + clientRut + ", day: " + day + ", time: '" + time + '\''
-				+ ", location: '" + location + '\'' + ", duration: " + duration + ", attendeesCount: " + attendeesCount;
+		return "Capacitation [id=" + id + ", clientRut=" + clientRut + ", day=" + day + ", time=" + time + ", location="
+				+ location + ", duration=" + duration + ", attendeesCount=" + attendeesCount + "]";
 	}
+
 }
