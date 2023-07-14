@@ -22,8 +22,8 @@
 					class="nav-item ${pageContext.request.servletPath == '/home.jsp' ? 'active' : ''}">
 					<a class="nav-link" href="<core:url value='/' />">Inicio</a>
 				</li>
-				<!-- <li class="nav-item"><a class="nav-link" href="contacto.jsp">Contacto</a>
-                </li> -->
+				<li class="nav-item"><a class="nav-link"
+					href="<core:url value='/contact' />">Contacto</a></li>
 			</ul>
 		</div>
 
