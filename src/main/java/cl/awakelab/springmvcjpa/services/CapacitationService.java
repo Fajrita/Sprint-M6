@@ -22,8 +22,8 @@ public class CapacitationService {
 		return capacitationRepository.findAll();
 	}
 
-	public Capacitation createCapacitation(Capacitation capacitation) {
-		return capacitationRepository.save(capacitation);
+	public void createCapacitation(Capacitation capacitation) {
+		capacitationRepository.save(capacitation);
 	}
 
 }

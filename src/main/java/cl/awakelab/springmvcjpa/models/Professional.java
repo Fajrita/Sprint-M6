@@ -13,45 +13,9 @@ import javax.persistence.Table;
 @Table(name = "professionals")
 public class Professional extends User {
 
-	@Id
-	@Column(name = "id")
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
-
-	@OneToOne
-	@JoinColumn(name = "id_user", referencedColumnName = "id")
-	private User user;
-
 	private String title;
+	@Column(name = "hire_date")
 	private String hireDate;
-
-	public Professional() {
-		super();
-	}
-
-	public Professional(int id, User user, String title, String hireDate) {
-		super();
-		this.id = id;
-		this.user = user;
-		this.title = title;
-		this.hireDate = hireDate;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
-	}
 
 	public String getTitle() {
 		return title;
@@ -67,11 +31,6 @@ public class Professional extends User {
 
 	public void setHireDate(String hireDate) {
 		this.hireDate = hireDate;
-	}
-
-	@Override
-	public String toString() {
-		return "Professional [id=" + id + ", user=" + user + ", title=" + title + ", hireDate=" + hireDate + "]";
 	}
 
 }

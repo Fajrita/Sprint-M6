@@ -48,6 +48,35 @@
 					</div>
 				</div>
 			</div>
+			<div
+				class="card col-12 col-sm-8 col-md-4 col-lg-4 m-2 custom-card-container">
+				<img
+					src="<core:url value='/res/images/thomas-lefebvre-gp8BLyaTaA0-unsplash.jpg' />"
+					class="card-img-top mt-2" alt="Imagen 1">
+				<div class="card-body">
+					<div class="d-flex justify-content-center">
+						<a href="<core:url value='/create-user' />">
+							<button class="btn btn-card btn-primary btn-lg">Crear
+								Usuario</button>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div
+				class="card col-12 col-sm-8 col-md-4 col-lg-4 m-2 custom-card-container">
+				<img
+					src="<core:url value='/res/images/sigmund-HsTnjCVQ798-unsplash.jpg' />"
+					class="card-img-top mt-2" alt="Imagen 4">
+				<div class="card-body">
+					<div class="d-flex justify-content-center">
+						<a href="<core:url value='/list-users' />">
+							<button class="btn btn-card btn-primary btn-lg">Listar
+								usuarios</button>
+						</a>
+					</div>
+				</div>
+			</div>
 
 		</div>
 

@@ -15,25 +15,16 @@ import javax.persistence.Table;
 public class User {
 
 	@Id
-	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
 	private int id;
+
+	@Column(name = "user_type")
+	private String userType;
 
 	private String name;
 	private String dateOfBirth;
 	private int run;
-
-	public User() {
-		super();
-	}
-
-	public User(int id, String name, String dateOfBirth, int run) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.dateOfBirth = dateOfBirth;
-		this.run = run;
-	}
 
 	public int getId() {
 		return id;
@@ -41,6 +32,14 @@ public class User {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	public String getUserType() {
+		return userType;
+	}
+
+	public void setUserType(String userType) {
+		this.userType = userType;
 	}
 
 	public String getName() {
@@ -65,11 +64,6 @@ public class User {
 
 	public void setRun(int run) {
 		this.run = run;
-	}
-
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", name=" + name + ", dateOfBirth=" + dateOfBirth + ", run=" + run + "]";
 	}
 
 }
